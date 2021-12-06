@@ -1,0 +1,272 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="PerformSearchForVendors" this:PerformSearchForVendors.in_Vendor="UiPath" this:PerformSearchForVendors.in_WorkDir="C:\Users\andal\Desktop\test_task_2\" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Vendor" Type="InArgument(x:String)" />
+    <x:Property Name="in_WorkDir" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1138,2461</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="PerformSearchForVendors" sap:VirtualizedContainerService.HintSize="552,2396" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="URL">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">https://trends.google.com/trends/?geo=US</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
+        <Variable.Default>
+          <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">new System.Data.DataTable();</mca:CSharpValue>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Google Trends" sap:VirtualizedContainerService.HintSize="510,2304" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4c1b3a77-6678-4839-a300-d7954acba832" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,2088" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="CSVReportPath" />
+              <Variable x:TypeArguments="x:String" Name="NewFileName" />
+              <Variable x:TypeArguments="x:String" Name="StartYear">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">2004</Literal>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:String" Name="OldFileName">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">geoMap.csv</Literal>
+                </Variable.Default>
+              </Variable>
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT input-254'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/?geo=US" DesignTimeRectangle="623, 375, 673, 40" ElementType="InputBox" FriendlyName="'INPUT input-254'" FullSelectorArgument="&lt;webctrl id='input-254' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-254' tag='INPUT' type='search' aaname='' /&gt;" Guid="578c8102-6d03-4b0a-b96c-3df5c5eea31e" ImageBase64="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" InformativeScreenshot="8bbd9335efb604da892ab585e3aecd4f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Google Trends' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">in_Vendor</mca:CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="434,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'Past 12 months'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c1b3a77-6678-4839-a300-d7954acba832">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/explore?q=UiPath&amp;geo=US" DesignTimeRectangle="678, 344, 24, 16" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='select_value_label_10' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='select_value_label_10' tag='SPAN' type='' aaname='' /&gt;" Guid="dba7436a-1f93-476d-b10a-c91e49d7040c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAETSURBVEhL7ZSxjkRAGMfnVfTewhNIRKmwHS3voNYqNES1T+AVRKKgIKIUEjS22Yj/ZuZm73KXW+cSueb8kklM/sNvvm9A8MecwsM5hYfzD4RhGEKSJIiiCNM0kec5j7aJ4xi2bf840jTld7xBdF1HVVUYhgFRFEHTNHRdx+Nt6MO+kzxH0zR85QfEcRwsy8Im8zwjSRJM08Tme3hV6dfKnhBFUSDLMlzXRZZl7/K93O93XK/XTzK6iVcQKqjrGkEQQFVVWJaFcRx5vI/b7QbP85iMyukmXkGKouCXQNu2TErb+lv6vgd9Aal8C2IYBquQVkVbQdtbliWPj4f4vs8+C0EQcLlc2GGv68rj4zl/bQcDPABtb1mcGGuvBgAAAABJRU5ErkJggg==" InformativeScreenshot="cbd0ad94aabab6d9909753a77c70f30c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="577, 345, 105, 18" ElementType="Text" FriendlyName="'Past 12 months'" FullSelectorArgument="&lt;webctrl parentid='select_value_label_10' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='select_value_label_10' tag='DIV' type='' aaname='     Past 12 months   ' check:text='Past 12 months' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAAAWCAYAAADKHRJUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARDSURBVGhD7ZjbK21BHMfPv+Ldi3cv8uZFJLmFeCDyQCQhQhIe5MGllBTJi1xS4sHthUIklEtJ7nLJJbn+Tp85a1ZjW/blnH06Z9X61rTXmpk985vfZ36/mb1/iCfXyYPmQnnQXCgPmgvlQXOhbGjX19eSlZUlERERdomMjJS8vDxZXV2Vj48Pq+ffFfNcXFzI9PS0VFVVSW1trTw9PVmtv3RzcyOtra0SHR2tbCwsLJS9vT2r9f+V9vHy8rJV83v6Am1wcFA9Uy4vL6W/v19iY2P/eCKtkZERqays/AJCi3mAAaz6+vovfXmuqamRxsZGOTo6Uja2tbVJRkaGnJ+fW73+D+3v70tmZqb6RH8NGk419fb2Js3Nzcox4Yi2QNBeX1/VnMip7/b2tgJ0eHho1YicnZ1Jampq2DZWuPTPoAEKYIDDmVdXV59SU1lZmZycnFi9RZ6fn2VgYEBFp05dm5ub9vhm+g1kvBO0l5cXub29lff3d6tGlE2MTRp3Unt7uzQ0NEhXV5eym4KNwCYFR0VFKXuHh4ftDcO6GS83N1fZmpCQIGNjY3a7BjI5OSn5+fmqT3p6umxsbKh25jTXyrv2wcTEhFRUVCj/MO7c3JwdEN/5z5RfaDgGwxMTE2VqakoeHx8VJCDSn7OFZ+poQ0NDQ5KTkyO7u7vKmaRbFqdTV6BIMxVs3/n5eSkoKFAwnYTDAMU5id18xsTESHx8vMzOztp1cXFxtoPYULzr76ysrCg/jI6OKgcDjXaAsVbSdEtLixQVFcn9/b0a47tIo25tbU35B0Bmag/kP+T3IkLRu5IdBkQcw27XYnF8j++jjo4OaWpqsnfkw8OD6gNgFG5oLI7UuLi4aNV8FdDM9M54jGvWYWdJSYmMj4+r9XGe9vT02O1oZmZGsrOz1VoBkZKSotK1FlGWlJQkBwcH6v07aAsLC+od0cZm0BEayH/I70Xk7u7uk9GIVMiCgKnBmtAwAsMJe5y1vr5uG4DCCY3dzU7v6+v7NIevsIOipaE51TGn9sXS0pLV+ksmBPNZy7fO912Pax4LtBGxuo53f/5DAc80U0QZOZazQacA30hDTMLk3DyTk5OltLTUbg8XNNJxdXW1dHZ2+gWG3AQN+fMfCgmarxGIhWloOJJI3draslpFTk9P1cTaqHBAY566ujpV9FnqT6FCCzY9hhtaMP5DIUHjMOTQ5CwgNXGYYhThzG8mdkh3d7e6FGAMY3KQE+o7OztqDN7T0tLUj2HzbHSSEzTmILqKi4vl+PhYzaGLUzpHoUJDOMm8iLBWgJkXkUDQ8Am+YQyAMI4/aMH4D4UEDXG70ldcPlmEeSCz+N7eXnVlpQ9XZvMfFeYpLy9X19nvruhaTtD0IvV5ahbfvlq/Aw17g7nya0DIt46+XOL4ScEFIxA0FMh/yIbmyT3yoLlQHjQXyoPmQnnQXCgPmusk8hPF99QcUszMIwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click '2004 - present'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/explore?q=UiPath&amp;geo=US" DesignTimeRectangle="567, 728, 95, 18" ElementType="Text" FriendlyName="'2004 - present'" FullSelectorArgument="&lt;webctrl parentid='select_option_21' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='select_option_21' tag='DIV' type='' aaname='     2004 - present   ' check:text='2004 - present' /&gt;" Guid="c4553b21-577a-4d66-a5bd-86b945388e53" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAWCAYAAADU1CLnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASwSURBVGhD7ZfLS1VfFMd//4pzJ86dOZFARBExjZQEEZ34oIGICZkOTCIcqIhJoiIapSiEqIgUPgYqooTig3xioab4oHyuH5/VXYd99aT008Ht1/3C5ty799lrr72+63X+kTBCBmEyQghhMkIIYTJCCGEyQghBZOzu7kpVVZVER0dLZGSk5ObmyuLiYmD1Jz59+qTzrMfGxsqbN2/k7OwssBosIyoqSsrLy2VnZyewGoyjoyMpKSmR9PR0+fbtW2D274VHxvfv36W0tFQqKipkfX1dtra25OXLl/LgwQP5+vWrvsPz4cOH0tbWpgaGmLS0NOnr69N1SHnx4oUUFRWpjC9fvigZjOPjY33HRXd3t5L6t5HBXbnz+Ph4YOYnPDJmZ2fV8Kurq4EZUWPev3/f29Tf3y/Z2dmyt7en/0FXV5cUFxcrmRCQmpoqU1NTgVWRpaUlJZCni8+fP8ujR4+krKwsTEYAHhknJydq5PPz88CMqPezaXJyUv+/evVKKisrg9ISAs2YMzMz+hsSDX4HWxQSYZ2dnd7+/4Lq6mp59uyZRjGpkdHY2KhnAHOG9vZ2iY+P1/cBzlBYWKiRmZCQoFFq98IGvb29Oh8REaHRPzIyIhcXF7rOE5tkZmb6rnMGdmppafHSdU1NjeqE87LHBo5suLaAf/jwQXJycrxI4BC7jMElw/1t8CODtPb48WM5ODhQ5W5LBhcmapExNDQk9+7dU+MDyOA/Ec3awsKCrK2tKUG2h6yQkZHhpdvh4WFJTEyUiYkJXec9iJmfn9f16elpzRi2Pjo6KklJSToP0AkCOjo61KG5e1xcnAwODuo6ey7bBPySDJTmwLGxscDM3ZCBIUhPGADcBRlEhXklgIiCggI5PDxUMlJSUrzzgF+Ev337VpuJHz9+SE9Pj+Tl5cn+/r6uUe+IhM3NTc0gpNbW1lZdA5yNDng/QCdXvu2x9d8ig+KNJzU1NQUpfFsykPX8+XNNT2a868gwr7aQvqw8uEknS1M8AcbG6G6qsGG1j/vTMcbExKhR8XxLe2QJnMlvv+nhp5M759rExRUyrN2sra0NIgLgUTAM0wb34tQMCjiF3OAejHeRo/0uwoAYF5zP5ZHBcM81+F38OjIwKkZvaGjw5NogEsxJqBvc4927d1obkLGysqLvIfv9+/dX9mM74KeTO2cyriUDYU+fPtVhgl18/PjxSjdFSjCPonBziNtNkWchCGNgzMsXIEoogMvLy573/Q644E1pyiUDkC5MZwPGR8bp6ammKeqGAZJIWziLRRYyXGe1/eDWZCCYaMjPz5eNjY0gg5nHbG9vS1ZWlvedQQGj0LnfGShp3xkMfv/qOwPcRc0glVGckYFOFFuLMj8yqIfoXV9frymJgZzXr1/rHeiscBAi2WTyvhFEHeVMOkHswD2fPHmiHRhwDW9w57AnjVFzc7NXl4BHBsq6+dkdrhfxRX7dFzjeaG3mTV/g4C7IIJLd1paW0sj3IwPMzc15rS176urqVHdghFhrm5ycLAMDA17bj2NCiLW22IHOyc68iQxAh0ZNIsoMvgX8T4Lfxf9UhMkIIYTJCCH88WT8nxAmI4QQJiNkIPIv/POFej8ZGFEAAAAASUVORK5CYII=" InformativeScreenshot="0afe1b0d980e9749373e1c94f1ebb903.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Subregion'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c1b3a77-6678-4839-a300-d7954acba832">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/explore?date=all&amp;geo=US&amp;q=UiPath" DesignTimeRectangle="1372, 843, 24, 20" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='select_value_label_56' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='select_value_label_56' tag='SPAN' type='' aaname='' /&gt;" Guid="daa15b8f-31ca-4198-a718-5e98f812a580" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAADpnJ2CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVEhL7dLRCYAgEMbxVnEyN3ABt3ASB7kVXMFXHy/OlCiyAj+C4H7gm/n3pIU/pkE4DcJpEO4/wRACG2MeV4yxfbGZmlAOu4r0RURt5276SUeTnifrpoOlFPbeH2JyiRHIT5NzZmttjUlcLjECCYqUEjvnavwOLPiWBuE0CMa8AutKJjHtZL8EAAAAAElFTkSuQmCC" InformativeScreenshot="46b80ba2f01e0c7e54bd5ece59128c6e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1296, 845, 72, 19" ElementType="Text" FriendlyName="'Subregion'" FullSelectorArgument="&lt;webctrl parentid='select_value_label_56' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='select_value_label_56' tag='DIV' type='' aaname='     Subregion   ' check:text='Subregion' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEwAAAAXCAYAAACh3qkfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP4SURBVFhH7ZfLK3VRGMa/f8XcxFxJJhIDklwKGUjEgNySEpLcEkWEIhIJmRBKEROXREKIgRC55E54vp737He3z8139ulD6vxqD85aa6/1vs9+L+v8QQBbBASzSUAwmwQEs0lAMJs4Cfby8oLJyUmkpKQgKCgIERERaGpqwuXlpbHi3zw9PaGsrAzj4+PGyPfC84eHh7G5uWmM/F9Mwd7e3tDR0YGoqChMTU3h4uIC29vbKCgoQGZmpvz2hZ8W7O7uDrm5uejt7TVG/i+mYMfHx4iPjxexrNzc3CArKwsDAwPGyOf8tGBfjSnYwcGBRNfCwoIx4oCRt7W1hb29Pfnd0tIiglAYZWVlBWlpabi6ujIF6+vrQ3NzM0JDQ+Xp6ekx39E13d3dqKioQExMjJxPTk5OUFpaipCQECkJ/FAsFcr9/b3bvrW1tWIXoQ20xfrBrq+v0dDQIOu5L/fnOYr6PjMzg/r6evPs0dFR8d+KKdjDwwMKCwuRkZGBw8NDfHx8GDPO+CoYjWMtOTs7w+zsrBhE57ivrgkLC0N7ezuWl5dFCKY907+mpkYifnV1FbGxsRgcHJT3aHxra6uMLS0tyfrOzk4EBwd7FYwZkpOTg7y8PBGG+3J/a5lRwaKjoyXDaDM/OH1YX1+XNYpT0T8/P0dRUZEUfBZ+KkwDrPgqWFdXl5PoQ0NDSE9P/3QN6w7Tn04qdEDfo2OMxvn5eWPWkQGfRRjfT05OxunpqfwmWmYY4UQFs5aj29tbZGdnu5UWJ8HI+/s7dnd30djYKGHJ8BwZGTFD01fBXA9iA0lMTBTjPK3Rsba2NmPEgfU9nkPBjo6OjFkHtMmTYPwYTN+qqiq8vr7KvEKx1A8VjPsr3vxwE8wKa8fY2BjCw8MxPT0tY/4KZjXK0xrtboxu14cpt7a2hsXFRfMcK94E03N0zgrn1Q+/BGNu0yhrgSWPj48oKSkxD/VXMEZKQkIC9vf3Pa7Rsf7+ftnH9WGE8Bx2ctpqxZtgGmF1dXVuxZuRrH74JRi/XmRkpDhmhcU4Pz/fTBV2Lf7muDI3N+cmmC81zGoM1/IddjA2IIWOsp4Qvfp8VQ2zJRiNLC8vR1JSkrRXdhDWMnYUpuTGxoasY9dg92Dn4hrtgK6CeeqS2u28GcPuzA6oXZJOsouyw/FqQHF4udYuqfP+dMnU1FSxjfglGHH9a0Sni4uLsbOzY6xwfNGJiQmJRhrKqwg3dRXM9R7GVNN092YMsd7D+FRWVjrdmfhhv+oeZluw3wC7uDXVtWRoen01v0qw5+dnVFdXS1oyHTUl4+LiJJ2/g18XYUwl3quYXiwJrE/86/Zd/DrBfpqAYDYJCGYL4C8YcRIn5TmtXgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'City'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/explore?date=all&amp;geo=US&amp;q=UiPath" DesignTimeRectangle="1270, 697, 152, 48" FriendlyName="'City'" FullSelectorArgument="&lt;webctrl id='select_option_110' tag='MD-OPTION' /&gt;" FuzzySelectorArgument="&lt;webctrl id='select_option_110' tag='MD-OPTION' type='' aaname='' check:text='City' /&gt;" Guid="2723d5c6-4b1e-4ae2-8fa4-2d2fbaadc4b9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJwAAAA0CAYAAAB/91HOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMGSURBVHhe7dxPSypRHMbx+1Z8FS3aXHAj7oI2pqi4Cl/A3YSL7rJACLfpRndtwpXgwkIKBBehVNxCMgspRSkhypB+l+c0Exl272bmhyPPBw4yR2v15ZyZ8c+P8XgsNzc3QuQmNIbWGBypYHCkisGRKgZHqhgcqWJwpIrBkSoGR6oYHKlicKSKwZEqBkeqGBypYnCkisGRKgZHqhgcqWJwpIrBkSrXgnt+fpZCoSArKyvi8/nE7/dLLpeTp6cn6xUit7e3ks/nZTAYWDO06FwJDlGlUimJRqNydHQk/X7fPOIY83Z0p6enEgwGzSMMh0OJxWJSr9fNMS0eV4IrlUpmZbu8vLRm3p2fn0sgEDDxzcLgFp/jwWEr3djYkK2tLZlMJtbsOzy3vb1ttlpAWFjhWq2W7O/vm63XHgiv2WyacKvVqnk92P8/nU5bM+Qly7/+yM/fQ+eCs1cpBPQ/n4NDSO12W8LhsBwcHMjDw4OZ29zcnIq30+nI6urqt6skzbe5CQ5mbanlcllCoZDc3d19HEciEbm/vzfH5C1zHxxCQ3DYVrHKYbXLZDLy9vZmvYK8ZO6DQ2Q4X0No3W5X1tbWpp4nb3E8OPukftYq9K+LBpgVHOB8DaHt7e1JMpk053fkTY4HB/ZtkaurK2vm3dfbIt8FV6vVzLEN8/F4XJaWlmR3d5fbqYe5EtznG7+IB+8kzLrx+zW40WhkVrCdnR3p9XofV6YIDKEhuJOTEzNH3uRKcICo8FYW3tLCfTWseNhK7djga3CAq1D8TSKRmNo6j4+PZX19ndupx7kWnJPsC4dsNmvNkFfNdXDYSnH+ViwWzQp5cXFhPUNeNdfBvby8mHM+XGgcHh7yYmEBeGJLpcXB4EgVgyNVaAytMThSweBIFYMjVQyOVDE4UsXgSBWDI1UMjlQxOFLF4EjVVHD4rQ8iN6ExE9zr66v5VhSRm9AYWjPB4XsEjUbDfAe0UqlwcDg20BTaQmMmOHyM+/HxUa6vr+Xs7Mz8rgcHh1MDTaEtNDaZTOQvdO1z7iEPlCIAAAAASUVORK5CYII=" InformativeScreenshot="882a3b3288d3008e644b8fbb8488c7b2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='trends-widget' idx='1' /&gt;&lt;webctrl tag='ng-include' idx='1' /&gt;&lt;webctrl tag='widget' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='widget-actions' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='button' idx='1' /&gt;&lt;webctrl tag='i' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="0" ScopeIdentifier="4c1b3a77-6678-4839-a300-d7954acba832" Version="V1">
+              <uix:NExtractData.DataTable>
+                <InOutArgument x:TypeArguments="sd:DataTable">
+                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">ExtractDataTable</mca:CSharpReference>
+                </InOutArgument>
+              </uix:NExtractData.DataTable>
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/explore?date=all&amp;geo=US&amp;q=UiPath" DesignTimeRectangle="1410, 792, 28, 28" FriendlyName="'file_download'" FullSelectorArgument="&lt;webctrl aaname='file_download' idx='2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='file_download' type='' tag='I' check:text='file_download' /&gt;" Guid="3714c77e-8c70-4eaf-85dd-6183e51c61f1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEVSURBVFhH7Ze9DoIwFIV9V2KYTHyNxhcwrk44+wJsrC5MzsjkZOLgzzUn4Ta1lJ/CjZWEm3wTcM5HIaQsKPD8n0CWvUmpJ8Xxg6JIBmQhE9n2fAkkycsZIAk6zNECsOOTDsc75Zcbna8yIAuZnG+uhBbAEnG5K0QClkAXjxbgZy555zbIRge6eLQADgDXhSandEfL1brGJi2d59twD88sMAtMQKDIaa/qha2oI6WFlVPhLwBKDwmUl46MimECoI9ERzkYLgDaJHqUg3ECwCXRsxyMFwCmhEc5kBEAkNj6lQM5gYFMT6Dpy9dF05dxegLSNAoE35IF35QG35Zjgv6Y8MAOS8TvhATIQqZ55zw1gV9PYAGiD3U50x4a8CSWAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='msedge.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1332, 795, 32, 20" FriendlyName="'City'" FullSelectorArgument="&lt;webctrl parentid='select_value_label_87' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='select_value_label_87' tag='SPAN' type='' aaname='' check:text='City' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAYCAYAAACSuF9OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIfSURBVEhL7ZXNq3lBGMd//4q9jfIPWCgpC2Vhx1KUhfJSNuyUspCSspWsKCVlaWMhlPJWNig7b3mJ8L09c+ece8+9xzn63XvqLnxqMueZzPmcZ56Z+Yc/xktIjZeQGt+ERqMRgsEgDAYD9Ho9fD4f+v0+7vc7G79er6jVamg2m2LsN5EItVotmEwmZDIZzGYz1qhPMRojLpcLEokEa9QnKpUKotEoTqcTe/4JotBms4HH40E2m2VZEKB+MplkWTscDjwqRROhdrsNs9mM4XDIIx90u134/X7M53P2Unp5Op3GarWCy+WCTqcTW7lcRj6fRyAQwH6/5zO8z2+xWDCZTHhEHlGIvpImp5co8VnodruxzBaLRZbB5XLJxnu9HqxWq/hxVGskqZRlgR8JCXxdst1uB6/Xi0KhIHkulUrsWQlNhAiSEZaNMuV0OjGdTvnoYzQTolpxOBxMhuS+jj9CUtQ2m032Kx4VtYCcENUK1Uwul2O/9XqdjygjCgnbniZQ2vaPhCKRCI7HI4+8Q3Gj0cgyRWfaM4hChHAw0llEO0buYJQTajQabFfRib7dbnkU7P92ux3xeBzn85lHlZEI0fakSem6oGuDrg/KzGAwEK8JOSGqu3A4zM6harXKox/L9uxyERKh34YK2+12Y7FY8Ig6mgjRHTcejxEKhZBKpSQ1qYYmQp1OhxVzLBbDer3m0efQdMn+h5eQGn9MCHgDLE6pmcPYskEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://trends.google.com/trends/explore?date=all&amp;geo=US&amp;q=UiPath" DesignTimeRectangle="372, 361, 1176, 1248" FriendlyName="'Interest over time'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;md-content&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" Guid="2947adee-c6b5-48c7-b53f-fa1499a2109f" InformativeScreenshot="d84e6269a60a9443559d56cc83966593.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='UiPath - Explore - Google Trends' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <Assign sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">CSVReportPath</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),"downloads")</mca:CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:CopyFile ContinueOnError="{x:Null}" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="False">
+              <ui:CopyFile.Destination>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">in_WorkDir</mca:CSharpValue>
+                </InArgument>
+              </ui:CopyFile.Destination>
+              <ui:CopyFile.Path>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">CSVReportPath + "/" +OldFileName</mca:CSharpValue>
+                </InArgument>
+              </ui:CopyFile.Path>
+            </ui:CopyFile>
+            <Assign sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">NewFileName</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">"worldwide_"+in_Vendor+"_"+StartYear+"_"+DateTime.Now.Year+"_interest_city.csv"</mca:CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:RenameFileX DisplayName="Rename File" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="RenameFileX_1" KeepExtension="True">
+              <ui:RenameFileX.FilePath>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">in_WorkDir+OldFileName</mca:CSharpValue>
+                </InArgument>
+              </ui:RenameFileX.FilePath>
+              <ui:RenameFileX.NewName>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">NewFileName</mca:CSharpValue>
+                </InArgument>
+              </ui:RenameFileX.NewName>
+            </ui:RenameFileX>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAh4SURBVFhHpdd7UFNnGgbwWBURCAQVtu0/OzudcXVFVEBATdWKLVvkIuEmWAoUtOttqsICIiqKiEQBoV4xut1O1d11lW4RvFTSQ0ggECABkhAIIF4QpXZTt1Pcdbt59j050QoBq+07804YhuT5fe/58p0D70XLi3kQM69mgJlb02+aU9OHObIeeMqMmCM3YI5Ci3n1Gmr1kE+jsptaskhd/WvrW39Z+TDfSnwY05BXzQNQOPVtsIDZsm7qLnjWdsBTrsWculYCNMOnQQn/phoINdfNS9oudy/TVgitH/Vy5cs8Evoy35t8mIfwrvkGXjWDFH6Hwm/Cs+YGZtewgA54yPSYLW+Dp6IVc+ub4KVUYUEzC7iGpW0VWK67iKCuM+qwXsmLT8SPeZTvywyZLeHMP+HFDGJezT0C3OVWT+EelnAO4FHbRgg1AVTwbqiHb5MMC1qqLYDAjnN413AGK3tPDMX158dYI8YuP+Y/Elo55jPfgQXQ+C2rn0fh7AQsq6fRz2KDLa2jn1lAK02hGfOUjfBVsRO4agWcRVh3GQsAAcyr+/PGRvgzj/MJAFo99fcU/i1N4AEB7lsAnjLu2nvIDJbVs8GzZO34nawVs2pZQAvtBRXtAxmE6itY1n4RgfrPCHAC0TcLQeFIGNhhTh5Mt90X/sx/hRRu9mP+bQHMZ/5F/ZCC2Wt/l177afUsoJNCtU+DR/ZseTMhGmgjfonFmgoEaM8juOsEIm4UIe52LpLuZ2HN16lD1tgfy495bKKm8EdWwHfwkpow84tbmFnRS92DGZe6CGCkcP2o4Wx7yFtoLyixsPkKAf6BgHYWUIaIXjFib+UhaSAVawY3YaMpRWKNtqxewoY/Wf30c31w230NLqnlEGRWwjXrCqZkVVFfwtSMcryaX4U3/t48BoD9KjLwbZRiUUsllmvPIMhQhugbuYi9mY3E/i1IubceGx7Em63xFsAQXX94fP4NBFnXwM+4BudsBi67FBDk1sM1rwFT8pSYmleHabkyTNstxbSdl/FqbhWmV2qGAWbLVZhbJ4e/6hIWt/wNAa2fYEVHCUI7xVjVtw0JdzYh+e5a/OF+PDY9iJRQ+A8xBMD0M/1wSL0Kp+214Oc0wnmvBi772yEQ6+B6UIcp1FMLdXArbIPbgRa47a+HW64UbtkVeOMCNw2P2hY6lBQEUGB+fRUWNV/EMs0pBHcUQ2TMQUxvBuJubMYH/Wvx4b14rB+MHuAtqn6kmXn+a0xOk8IhWwnH3Wrw83RwLjDARdwJQWEXXIuMmHLIiKnU00qoDxngXqyD+4EmuOfJ4LajEr+tUtKpKMdcuRReisvwbziPN5s+xTL1MQTr8hBu2I5o4xa835eCpNuJSOmPxYd3ReB5Vzz8H39nI+yzVXDY3QbHvA445XeCX2CE8wEjXA52Q1DUDdfiHkL0YGpJDyE68XppR/evSg0F7kXqdPd9CuVrBdfhwbCA6wSoxALlZ3hTdQpvNR9BiC4XIkMWAbZide9aJN5MRPKtKA4w4y+DmLS9Gfa72jA5Vw+HvE447qPe3zUcUcghBNl1+M2Wz0us2+dpuefVJk4vr4a3/AJ8FefgX/dnLFaVIaBJjOC2TIRqMxFp2Ij3ehKR0LfaAlhzJxw8t+Iu2GW3YlKOHva5Bkzea7AgHKwIpwKCiDmESzoDxyCx0pppUzM+ufrYW3aWAGexsP4kFisPYplKjCBNBkLb0yDSb0CsIQ7x3VFIuiFCys1Q8FwPGjFxpw52u/SYtNsA+z0cYvJIRKaCwgvgFFaabs2zKZ+/Xm33ln0Kv9ojWKQoxJIGMd5pzECgKg0hmnUIb09GlC4e7xkj8b4xBCl9gWbehGwtJhBg4q4O2OV0EKLDgrB/FrFXD8fQIgovAV90PNWaZ1PejCTfR3aKAIcJcABL6vYgoD6NABsQ0pIIUXsCYvTRNAUR4jt/j0RjQDdv/HYC7NATQm+LYC8Ji9hQBccQAoiOgR95ssCaZ1M+X5UMzK85goW1+6n34S1FKpYrUxHYuA4rGhMQpo6HSBOFWH0IYnXvIt4QIOS9sl2H8dm6URGTrAiHiKNwWnmYDQc/+nS3NW9YeUk/FnpLi+k0FcOfyYWwdieWyrciQLEegfUJHKBJBFFLKCI1QYjTBzKWN76SpTONhbBjJ5HVDIeQQlr9cfCjTrEAMz/qtM3DhXe1uNxbWghf6R4sZHZCyGzF0tqNCJAn4526BAQ1rEKoKhwidQgL4MLZGrdNxxACTxDjR04inQ6n0ENwiihjw6n/RJDTA9a3Dyvf6hy1nzTHvECaToBUAqwjwAd4Wx6HoPpwBDeEm8JUoZutf87VuG3aGELABkE9kb4Z9usq4RhWah0/hXMAdhrl1o+wKaF002Yh85FkCZPMBMhWM2/XrpIEyiPGfjYkxBCLGPcsIptD2KXVw3Hlx6MB4Bx5ctT98PKVqc0nBCw9AjExXUUTKIHT6AA4R5QNOYtODB/rc8p1RWGMa9DBUR5QM7Um3ggEB6EzIPww7YETFP50DzwLAAGojw+5hB8rd1l51OaZTxByKEYQXCwRBBeZCAACjDK5TK2Q2jwaYlLKF3AKP0qhEg4xOgAEAAGoj8Al7DAEoaXUJSAACEBdBAKYCTDGfqBLQY2RiPEZLXCMOEaXgb4J7FfxlwHyrWljVKZWYoOgtlt3jaZwhNuMkSziZwF+fA58bnGTMLOQZxH2SRe4S8GeCZESAlD4iwHMBPiJlY8sbk+YRiIsk6AAuilROBvMhTvTfWIMgIkAP+//Q0tx06BzgoVwiPHpLZicdBF8uj8400ScKZR95YKp6fcEGCLAS676eZXJnphahhCmJ6fmhKw22P2xge6WX8Lxo6/gmsr88Fpa9cPXU86PecseXjze/wGADjhbeB2rcwAAAABJRU5ErkJggg==" InformativeScreenshot="abf2f24d02759d1a65df805550d1220e.png" Selector="&lt;html app='msedge.exe' title='Google Trends'/&gt;">
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">URL</mca:CSharpValue>
+            </InArgument>
+          </uix:TargetApp.Url>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
